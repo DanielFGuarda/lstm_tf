@@ -1,0 +1,31 @@
+Phil C told me that the results for financial TS of this paper
+were gucci af.
+
+Convolutional Neural Network
+consist of a sequence of  convolutional layers
+(the outputof which is connected only to local regions in the input.
+
+Inspired by the WaveNet CNN
+
+Reduces the connections between the nodes to give it a sense of locality.
+The weighted sums are replaced by convolutions.
+
+Adaptabiity constraint on x?
+Ahhh we pad the input vector with zeroes for it to match
+the size of future vectors (more data = bigger)
+
+L2 regularization term to avoid overfitting.
+
+Residual learning.
+
+Adding mor elayers to the model makes it so that it is unable
+to find the optimal weights - means higher training error.
+(Degradation problem)
+
+A solution is to use the residual connections
+they are implemented by using shortcut connections, that skips
+one or more layers.
+
+They used training data of 750 pts.
+
+Very solid results, am extremely interested in this method.

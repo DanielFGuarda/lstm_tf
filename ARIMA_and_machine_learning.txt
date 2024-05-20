@@ -1,0 +1,46 @@
+Attempts to model real-world time series using a combination of
+linear modelling for the time-series and non-linear modelling for
+the error series.
+
+Using ARIMA and MLP, SVR.
+
+AR, MA and ARIMA are flexible, light but purely linear models.
+
+Artificial Neural Networks are flexible and data driven models that
+are able to perform nonlinear modeling.
+
+Only ANN may not be enough for real-world TS due to misspecification,
+under-fitting or overfitting.
+
+That's where hybrid models combining stat models and ANN truly fucking
+shines.
+They use the modelling of the residuals series.
+Non linear combination of these models usually wields better results than
+a linear combination.
+
+System functions in 3 steps:
+1. Linear model employed to perform forecasts.
+2. Residuals are modelled by a nonlinear model.
+3. Supervised learning model employed to perform
+combination of the forecasts.
+Those used are MLP and SVR.
+
+DATA:
+Canadian Lynx, Sunspot, BP/US exchange rate, Colorado River Flow,
+Airline passengers, Star Brightness.
+
+The lag variable is a key point for the proposed method.
+lag give data from the subset (1,lag) where lag < LMax
+(2,LMax) where LMax is a cross-correlation
+between TS and ES obtained from the forecasts of the linear model.
+
+This method is flexible because it is able to select the number of forecasts
+required to improve the combination of L and NL model.
+
+2 versions proposed
+under the nomenclature Mc(Ml,Mnl) (combi(linear,non-linear))
+MLP(ARIMA,SVR) and SVR(ARIMA,MLP).
+
+Time to check Gaussian Kernel and RBF kernel stupid inbred fuckface.
+
+Exchange rate are weekly series and test set over 1 month, 6 months, 12 month.

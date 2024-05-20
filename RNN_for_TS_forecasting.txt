@@ -1,0 +1,52 @@
+RNN are essentially neural networks with memory.
+
+Review some practices to implement RNN forecasting.
+
+Two types of RNN:
+Long short-term memory and
+Gated recurrent unit
+
+LSTM:
+Has 3 gates that manage the contents of the memory.
+The gates are simple logistic functions of weighted sums
+that might be learned by backpropagation.
+
+Input gate forget gate and output gate
+
+GRU:
+Simplified LSTM
+It has 2 gates, there's no control over the memory content
+
+Stacked LSTM were used to make robust predictions for time series with
+outliers and change points.
+
+Feature engineering
+Time series normalization for the training process, minmax or standard.
+
+Lagging
+Means fgoing back in time,
+might be problematic if the series is short.
+Used as input for forecasting.
+
+Seasonality
+Using sine or cosine transformation to attribute seasonality
+is a good option.
+
+Feature importance
+May help at shining light at the black box process.
+Permutation accuracy is nice way to gaining insights.
+
+Prediction intervals
+By Bootstrapping we can gain an idea of probability of the value
+forecasted by the model. (Variability of the predictions by Bootstrapping
+is a good indicator of the confidence of the estimation).
+
+Bootstrapping is a natural way to produce forecasting ensemble to get
+better predictions.
+
+Again the idea of training a model to predict residuals.
+
+####################
+Interesting metrics output to reuse in my project.
+Prediction intervals metrics also gives use a nice sense of
+overall accuracy.
